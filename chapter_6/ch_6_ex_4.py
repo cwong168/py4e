@@ -8,7 +8,12 @@ occurs in “banana”'''
 Return the number of non-overlapping occurrences of substring sub in the 
 range [start, end]. Optional arguments start and end are interpreted as in slice notation.'''
 
-
+'''
 word = 'banana'
 count = word.count('a')
+print(count)
+'''
+
+
+count = 'banana'.count('a')
 print(count)
