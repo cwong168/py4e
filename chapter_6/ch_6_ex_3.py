@@ -9,5 +9,5 @@ def count(word, letter):
             clock = clock + 1
     print(clock)
 
-
-count('apple', 'a')
+# count how many 'a' are in banana, you can change word and letter.
+count('banana', 'a')
