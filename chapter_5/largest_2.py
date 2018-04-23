@@ -18,6 +18,11 @@ def getNumbers():
         except:
             print('Invalid input')
             continue
+'''
+I think the issue is I have not declear the try and except in the main section
+Maybe use the raise valueerror Jimmy showed but how does the array know if the
+val is a int or str?
+'''
 
     return numbers
 
