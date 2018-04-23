@@ -27,13 +27,19 @@ while True:
     val = input('Please enter a number: ')
     if val == 'done' :
         break
-    
-    if smallest is None or val < smallest :
-        smallest = val
-    elif largest is None or val > largest :
-        largest = val
-    
+    try:
+        
+        if smallest is None or int(val) < smallest :
+            print("smallest:", smallest)
+            smallest = int(val) 
+        elif largest is None or int(val) > largest :
+            largest = int(val)
+            print("largest:", largest)                
+    except:
+        print('Invalid input')
+        continue
     count = count + 1
+
     total = total + int(val)
 
     average = total / count

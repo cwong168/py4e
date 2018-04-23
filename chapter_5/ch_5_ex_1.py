@@ -14,7 +14,7 @@ while True:
         float_val = float(val)
     except:
         print('Invalid input')
-        continue
+        #continue
     count = count + 1
     total = total + float_val
     

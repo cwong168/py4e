@@ -3,8 +3,12 @@ printing each letter on a separate line, except backwards.'''
 
 
 fruit = 'banana'
+# print(fruit[-1])
 index = -1
-while index < len(fruit):
+#length = len(fruit)
+#index = length -1
+while index < len(fruit) and index != -7:
     letter = fruit[index]
     print(letter)
+    
     index = index -1
