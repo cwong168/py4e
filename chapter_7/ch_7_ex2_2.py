@@ -14,10 +14,15 @@ for line in fhand:
     line = line.rstrip()
     if line.startswith('X-DSPAM-Confidence:'):
         count = count +1
+        # find the : in the line
         fa = line.find(':')
+        # look at 1 position past the :
         fp = line[fa + 1:]
+        # change the number to float
         fn = float(fp)
+        # add the total of the numbers and making that total to float
         total = total + fn
+        # / the total float number to the number of times it ran
         av = total / count
 print('There were', count, 'X-DSPAM-Confidence: lines in', fname)
 print('The average is', av)
