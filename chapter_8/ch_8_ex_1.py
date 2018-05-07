@@ -12,13 +12,15 @@ def chop(t):
     del t[last]
     del t[0]
     print(t)
+    return None
 
 def middle(t):
-    last = len(t) - 1
-    del t[last]
-    del t[0]
-
     t2 = t[:]
+    last = len(t) - 1
+    del t2[last]
+    del t2[0]
+
+    
     return t2
 
 letters = ['a', 'b', 'c', 'd', 'e']
@@ -28,6 +30,6 @@ letters2 = letters[:]
 t1 = chop(letters)
 t2 = middle(letters2)
 
-print(t1)
+#print(t1)
 print(t2)
 
