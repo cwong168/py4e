@@ -11,11 +11,16 @@ word_list = dict()
 file = open('words.txt')
 for word in file:
     item = word.strip()
-    #count = (word_list.get(word,-99))
-    word_list[item] = True
+    oldcount = word_list.get(word,0)
+    print(word,'old',oldcount)
+    newcount = oldcount + 1
+    word_list[word] = newcount
+    print(word,'new', newcount)
+    #print(word,word_list.get(word,-99))
+    #word_list[item] = True
     #vals = list(word_list())
 
-print(word_list)
+#print(word_list)
 #vals = list(word_list())
 
 check_word = input('Type in a word to check if in dictionary:',)
