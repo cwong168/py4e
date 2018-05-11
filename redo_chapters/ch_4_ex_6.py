@@ -1,17 +1,15 @@
 '''
-Exercise 2: Rewrite your pay program using try and except so that your program handles non-numeric input 
-gracefully by printing a message and exiting the program. The following shows two executions of the program:
+Exercise 6: Rewrite your pay computation with time-and-a-half for overtime 
+and create a function called computepay which takes two parameters (hours and rate).
 
-Enter Hours: 20
-Enter Rate: nine
-Error, please enter numeric input
-
-Enter Hours: forty
-Error, please enter numeric input
+Enter Hours: 45
+Enter Rate: 10
+Pay: 475.0
 '''
 
- 
-
+def computepay(hours, rate):
+    compute = hours * rate
+    return compute
 
 try:
     hours = input('Enter Hours worked:')
@@ -25,11 +23,13 @@ except:
 if float_hours > 40:
     ot = float_hours - 40
     ot_pay = ot * float_rate * 0.5
-    pay = int(hours) * float(rate)
+    pay = computepay(int(hours), float(rate))
+    #pay = int(hours) * float(rate)
     ot_total = ot_pay + pay
     print('Over time Pay:', ot_total)
 else:
-    pay = int(hours) * float(rate)
+    pay = computepay(int(hours), float(rate))
+    #pay = int(hours) * float(rate)
     print('Pay:',pay)
 #except:
 #    print('Please enter numeric input:',)
