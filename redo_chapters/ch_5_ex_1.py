@@ -17,21 +17,16 @@ Enter a number: done
 count = 0
 total = 0
 
-numbers = input('Enter a number:')
-try:
-    num = int(numbers)
-except:
-    print("Invalid input")
-    quit()
-
 while True:
-    line = num
-    if line == 'done':
+    val = input('Please enter a number: ')
+    if val == 'done' :
         break
+    try:
+        float_val = float(val)
+    except:
+        print('Invalid input')
+        continue
     count = count + 1
-    print(count)
-    total = total + num
-    print(total)
-    average = count % total
-    #print(float(average))
-
+    total = total + float_val
+    
+print(total,count,total/count)
